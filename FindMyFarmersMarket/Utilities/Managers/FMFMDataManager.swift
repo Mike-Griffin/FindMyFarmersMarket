@@ -24,7 +24,7 @@ final class FMFMDataManager {
                         completed(.failure(error))
                     }
                 } else {
-                    completed(.failure(CustomError.bundleFile))
+                    completed(.failure(CustomError.jsonParse))
                 }
             } else {
                 completed(.failure(CustomError.bundleFile))

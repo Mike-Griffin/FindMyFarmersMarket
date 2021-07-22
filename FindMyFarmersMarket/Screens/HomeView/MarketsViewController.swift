@@ -19,9 +19,7 @@ class MarketsViewController: UICollectionViewController, UICollectionViewDelegat
             DispatchQueue.main.async {
                 switch result {
                 case .success(let markets):
-                    print("hello?")
                     self.markets = markets
-                    print(markets)
                     self.collectionView.reloadData()
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -31,10 +29,8 @@ class MarketsViewController: UICollectionViewController, UICollectionViewDelegat
     }
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("this even getting called?")
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellId.cellId,
                                                          for: indexPath) as? MarketCell {
-            print("we got a cell here")
             cell.backgroundColor = .blue
             cell.nameLabel.text = markets[indexPath.item].name
             return cell
@@ -44,7 +40,6 @@ class MarketsViewController: UICollectionViewController, UICollectionViewDelegat
 
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(markets.count)
         return markets.count
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
