@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4E465126A8FC66004E130F /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E465026A8FC66004E130F /* MarketsViewController.swift */; };
+		7F4E465326A907A0004E130F /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E465226A907A0004E130F /* MarketCell.swift */; };
+		7F4E465626A90C8D004E130F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E465526A90C8D004E130F /* UIView+Ext.swift */; };
+		7F4E465826A90F8B004E130F /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E465726A90F8B004E130F /* CustomError.swift */; };
 		7F83ED7226A3767000ECAF4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83ED7126A3767000ECAF4A /* AppDelegate.swift */; };
 		7F83ED7426A3767000ECAF4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83ED7326A3767000ECAF4A /* SceneDelegate.swift */; };
-		7F83ED7626A3767000ECAF4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83ED7526A3767000ECAF4A /* ViewController.swift */; };
+		7F83ED7626A3767000ECAF4A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83ED7526A3767000ECAF4A /* HomeViewController.swift */; };
 		7F83ED7B26A3767400ECAF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F83ED7A26A3767400ECAF4A /* Assets.xcassets */; };
 		7FD0D3D826A4B21100CC6DF3 /* FarmersMarkets.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0D3D726A4B21100CC6DF3 /* FarmersMarkets.json */; };
 		7FD0D3DA26A4B27B00CC6DF3 /* FarmersMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0D3D926A4B27B00CC6DF3 /* FarmersMarket.swift */; };
@@ -18,10 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F4E465026A8FC66004E130F /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
+		7F4E465226A907A0004E130F /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		7F4E465526A90C8D004E130F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		7F4E465726A90F8B004E130F /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		7F83ED6E26A3767000ECAF4A /* FindMyFarmersMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyFarmersMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F83ED7126A3767000ECAF4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F83ED7326A3767000ECAF4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F83ED7526A3767000ECAF4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F83ED7526A3767000ECAF4A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F83ED7A26A3767400ECAF4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F83ED7F26A3767400ECAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD0D3D726A4B21100CC6DF3 /* FarmersMarkets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FarmersMarkets.json; sourceTree = "<group>"; };
@@ -41,6 +49,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F4E464C26A8FBEE004E130F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				7F4E464E26A8FC28004E130F /* HomeView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		7F4E464D26A8FC0F004E130F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				7F83ED7126A3767000ECAF4A /* AppDelegate.swift */,
+				7F83ED7326A3767000ECAF4A /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		7F4E464E26A8FC28004E130F /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				7F83ED7526A3767000ECAF4A /* HomeViewController.swift */,
+				7F4E465026A8FC66004E130F /* MarketsViewController.swift */,
+				7F4E465226A907A0004E130F /* MarketCell.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		7F4E465426A90C12004E130F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F4E465526A90C8D004E130F /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7F83ED6526A3766F00ECAF4A = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +105,8 @@
 			children = (
 				7FD0D3DD26A4B2EA00CC6DF3 /* Utilities */,
 				7FD0D3D626A4B13600CC6DF3 /* Model */,
-				7F83ED7126A3767000ECAF4A /* AppDelegate.swift */,
-				7F83ED7326A3767000ECAF4A /* SceneDelegate.swift */,
-				7F83ED7526A3767000ECAF4A /* ViewController.swift */,
+				7F4E464C26A8FBEE004E130F /* Screens */,
+				7F4E464D26A8FC0F004E130F /* Support */,
 				7F83ED7A26A3767400ECAF4A /* Assets.xcassets */,
 				7F83ED7F26A3767400ECAF4A /* Info.plist */,
 			);
@@ -92,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				7FD0D3E126A4B43C00CC6DF3 /* Managers */,
+				7F4E465426A90C12004E130F /* Extensions */,
 				7FD0D3E226A4B44C00CC6DF3 /* Constants.swift */,
+				7F4E465726A90F8B004E130F /* CustomError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -195,12 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F83ED7626A3767000ECAF4A /* ViewController.swift in Sources */,
+				7F83ED7626A3767000ECAF4A /* HomeViewController.swift in Sources */,
 				7F83ED7226A3767000ECAF4A /* AppDelegate.swift in Sources */,
+				7F4E465126A8FC66004E130F /* MarketsViewController.swift in Sources */,
 				7FD0D3DA26A4B27B00CC6DF3 /* FarmersMarket.swift in Sources */,
 				7F83ED7426A3767000ECAF4A /* SceneDelegate.swift in Sources */,
+				7F4E465826A90F8B004E130F /* CustomError.swift in Sources */,
+				7F4E465626A90C8D004E130F /* UIView+Ext.swift in Sources */,
 				7FD0D3DF26A4B32A00CC6DF3 /* FMFMDataManager.swift in Sources */,
 				7FD0D3E326A4B44C00CC6DF3 /* Constants.swift in Sources */,
+				7F4E465326A907A0004E130F /* MarketCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

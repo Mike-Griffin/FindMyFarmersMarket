@@ -10,3 +10,11 @@ import Foundation
 enum FileName {
     static let farmersMarket = "FarmersMarkets"
 }
+
+enum CellId {
+    static let cellId = "cellId"
+}
+
+enum GCDLabel {
+    static let data = "com.comedichoney.data"
+}

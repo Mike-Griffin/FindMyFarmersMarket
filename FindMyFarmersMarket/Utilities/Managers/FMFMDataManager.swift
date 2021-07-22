@@ -9,27 +9,29 @@ import Foundation
 
 final class FMFMDataManager {
     static let shared = FMFMDataManager()
+    let dataQueue = DispatchQueue(label: GCDLabel.data)
     private init() {}
-    func fetchFarmersMarkets() -> [FarmersMarket] {
+    func fetchFarmersMarkets(completed: @escaping (Result<[FarmersMarket], Error>) -> Void) {
+        dataQueue.async {
         do {
             if let bundlePath = Bundle.main.path(forResource: FileName.farmersMarket,
                                                  ofType: "json") {
                 if let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                     do {
                         let decodedData = try JSONDecoder().decode([FarmersMarket].self, from: jsonData)
-                        print(decodedData)
+                        completed(.success(decodedData))
                     } catch {
-                        print("decode error")
+                        completed(.failure(error))
                     }
                 } else {
-                    print("error: unable to read file data as json")
+                    completed(.failure(CustomError.bundleFile))
                 }
             } else {
-                print("error: unable to get file bundle path")
+                completed(.failure(CustomError.bundleFile))
             }
         } catch {
-            print(error.localizedDescription)
+            completed(.failure(error))
         }
-        return []
+        }
     }
 }
