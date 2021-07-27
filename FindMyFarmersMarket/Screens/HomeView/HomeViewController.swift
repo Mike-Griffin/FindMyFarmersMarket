@@ -8,9 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let marketsVC: MarketsViewController = {
+    let marketsVC: MarketsListViewController = {
         let layout = UICollectionViewFlowLayout()
-        let marketVC = MarketsViewController(collectionViewLayout: layout)
+        let marketVC = MarketsListViewController(collectionViewLayout: layout)
         return marketVC
     }()
     override func viewDidLoad() {

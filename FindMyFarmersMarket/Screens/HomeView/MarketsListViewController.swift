@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MarketsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class MarketsListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var markets: [FarmersMarket] = []
     override func viewDidLoad() {
         collectionView.register(MarketCell.self, forCellWithReuseIdentifier: CellId.cellId)
@@ -43,7 +43,8 @@ class MarketsViewController: UICollectionViewController, UICollectionViewDelegat
         return markets.count
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
+        self.navigationController?.pushViewController(MarketDetailViewController(market:
+                                                                                    markets[indexPath.item]), animated: true)
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
