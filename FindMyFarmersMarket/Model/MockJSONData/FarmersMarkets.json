@@ -1,9 +1,11 @@
 [{
     "name": "Walnut Creek Farmers' Market",
     "city": "Walnut Creek",
-    "state": "California"
+    "state": "California",
+    "vendorIds": [1,2,3]
 }, {
     "name": "Livermore Farmers Market",
     "city": "Livermore",
-    "state": "California"
+    "state": "California",
+    "vendorIds": [3,4]
 }]

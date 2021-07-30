@@ -20,6 +20,8 @@
 		7FD0D3DA26A4B27B00CC6DF3 /* FarmersMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0D3D926A4B27B00CC6DF3 /* FarmersMarket.swift */; };
 		7FD0D3DF26A4B32A00CC6DF3 /* FMFMDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0D3DE26A4B32A00CC6DF3 /* FMFMDataManager.swift */; };
 		7FD0D3E326A4B44C00CC6DF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0D3E226A4B44C00CC6DF3 /* Constants.swift */; };
+		7FF41D7526B384470015AA36 /* Vendors.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FF41D7426B384470015AA36 /* Vendors.json */; };
+		7FF41D7726B384B40015AA36 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF41D7626B384B40015AA36 /* Vendor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7FD0D3D926A4B27B00CC6DF3 /* FarmersMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersMarket.swift; sourceTree = "<group>"; };
 		7FD0D3DE26A4B32A00CC6DF3 /* FMFMDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMFMDataManager.swift; sourceTree = "<group>"; };
 		7FD0D3E226A4B44C00CC6DF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7FF41D7426B384470015AA36 /* Vendors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vendors.json; sourceTree = "<group>"; };
+		7FF41D7626B384B40015AA36 /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			children = (
 				7FD0D3DC26A4B28900CC6DF3 /* MockJSONData */,
 				7FD0D3D926A4B27B00CC6DF3 /* FarmersMarket.swift */,
+				7FF41D7626B384B40015AA36 /* Vendor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 		7FD0D3DC26A4B28900CC6DF3 /* MockJSONData */ = {
 			isa = PBXGroup;
 			children = (
+				7FF41D7426B384470015AA36 /* Vendors.json */,
 				7FD0D3D726A4B21100CC6DF3 /* FarmersMarkets.json */,
 			);
 			path = MockJSONData;
@@ -219,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD0D3D826A4B21100CC6DF3 /* FarmersMarkets.json in Resources */,
+				7FF41D7526B384470015AA36 /* Vendors.json in Resources */,
 				7F83ED7B26A3767400ECAF4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +266,7 @@
 				7F4E465826A90F8B004E130F /* CustomError.swift in Sources */,
 				7F4E465626A90C8D004E130F /* UIView+Ext.swift in Sources */,
 				7FD0D3DF26A4B32A00CC6DF3 /* FMFMDataManager.swift in Sources */,
+				7FF41D7726B384B40015AA36 /* Vendor.swift in Sources */,
 				7FD0D3E326A4B44C00CC6DF3 /* Constants.swift in Sources */,
 				7F4E465326A907A0004E130F /* MarketCell.swift in Sources */,
 			);

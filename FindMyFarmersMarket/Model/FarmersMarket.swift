@@ -11,4 +11,5 @@ struct FarmersMarket: Codable {
     let name: String
     let city: String
     let state: String
+    let vendorIds: [Int]
 }

@@ -44,7 +44,8 @@ class MarketsListViewController: UICollectionViewController, UICollectionViewDel
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(MarketDetailViewController(market:
-                                                                                    markets[indexPath.item]), animated: true)
+                                                                                    markets[indexPath.item]),
+                                                      animated: true)
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

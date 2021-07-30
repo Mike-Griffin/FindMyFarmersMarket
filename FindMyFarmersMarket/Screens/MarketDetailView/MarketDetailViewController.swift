@@ -9,22 +9,33 @@ import UIKit
 
 class MarketDetailViewController: UIViewController {
     var market: FarmersMarket
-    lazy var titleLabel: UILabel = {
+    var vendors: [Vendor] = []
+    let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = market.name
         return label
     }()
     init(market: FarmersMarket) {
         self.market = market
+        titleLabel.text = market.name
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     override func viewDidLoad() {
-       setupUI()
+        setupUI()
         addSubviews()
         configureConstraints()
+        FMFMDataManager.shared.fetchVendors { result in
+            switch(result) {
+            
+            case .success(_):
+                self.vendors = FMFMDataManager.shared.fetchVendorsFromMarket(self.market)
+                print(self.vendors.count)
+            case .failure(_):
+                print("error")
+            }
+        }
     }
     private func setupUI() {
         view.backgroundColor = .white

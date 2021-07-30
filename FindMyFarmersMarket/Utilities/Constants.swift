@@ -9,6 +9,7 @@ import Foundation
 
 enum FileName {
     static let farmersMarket = "FarmersMarkets"
+    static let vendors = "Vendors"
 }
 
 enum CellId {
